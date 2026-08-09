@@ -17,7 +17,7 @@ const channels = [
   {
     index: '02',
     label: 'WhatsApp',
-    value: '+20 105 520 0552',
+    value: '+20 10 552 00 552',
     href: 'https://wa.me/201055200552',
     note: 'Fastest if you want an answer today rather than tomorrow.',
   },

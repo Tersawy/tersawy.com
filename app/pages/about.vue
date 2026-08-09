@@ -2,14 +2,14 @@
 useSeoMeta({
   title: 'About',
   description:
-    'A technical diploma in automotive technology, then six years teaching myself to build software — up to owning a multi-tenant SaaS platform end to end.',
+    'A technical diploma in automotive technology, then seven years teaching myself to build software — up to owning a multi-tenant SaaS platform end to end.',
   ogTitle: 'About — Mohamed Tersawy',
   ogDescription: 'How a diploma in automotive technology turned into owning a SaaS platform.',
 })
 </script>
 
 <template>
-  <PageIntro eyebrow="About" title="No computer science degree. " accent="Six years of shipping" title-end=".">
+  <PageIntro eyebrow="About" title="No computer science degree. " accent="Seven years of shipping" title-end=".">
     <p>
       My diploma is in automotive technology. Everything I do professionally, I taught myself —
       starting in 2019 and, so far, not stopping.

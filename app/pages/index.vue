@@ -3,10 +3,10 @@
 // setting one would produce "Mohamed Tersawy — … — Mohamed Tersawy".
 useSeoMeta({
   description:
-    'Full-stack developer in Giza, Egypt. Six years building systems where being wrong is expensive — orders, ledgers, money — and owning them through to production.',
+    'Full-stack developer in Giza, Egypt. Seven years building systems where being wrong is expensive — orders, ledgers, money — and owning them through to production.',
   ogTitle: 'Mohamed Tersawy — Full-stack developer',
   ogDescription:
-    'Six years building systems where being wrong is expensive, and owning them through to production.',
+    'Seven years building systems where being wrong is expensive, and owning them through to production.',
   ogType: 'website',
 })
 </script>
@@ -19,7 +19,7 @@ useSeoMeta({
     title-end="."
   >
     <p>
-      Six years of it, most of them on systems where being wrong is expensive — orders, ledgers,
+      Seven years of it, most of them on systems where being wrong is expensive — orders, ledgers,
       money that has to reconcile. I'm most useful where the API, the interface, and the
       infrastructure underneath are all one person's problem.
     </p>
