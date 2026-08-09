@@ -1,0 +1,118 @@
+@import 'tailwindcss';
+
+/*
+  "Set in ink" — an editorial direction.
+
+  Light is the primary world: an ivory sheet with dark ink and one wine accent used sparingly,
+  for the italic phrase in a headline and for marginal numerals. Dark is a designed night
+  edition rather than an inversion — the ground warms toward brown-black so the paper feeling
+  survives, and the accent lifts in lightness so it still reads against it.
+*/
+
+@theme {
+  --font-display: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+
+  --color-paper: #f8f7f4;
+  --color-paper-raised: #fffefb;
+  --color-ink: #16130f;
+  --color-ink-soft: #332e27;
+  --color-muted: #6e675c;
+  --color-rule: #d9d4c8;
+  --color-accent: #6e2f3f;
+
+  --text-display: clamp(2.6rem, 7vw, 4.75rem);
+  --text-title: clamp(1.9rem, 4.4vw, 2.9rem);
+  --text-lede: clamp(1.06rem, 1.5vw, 1.22rem);
+}
+
+/*
+  The night edition overrides the custom properties on :root — NOT inside a second `@theme`
+  block. Tailwind v4 evaluates `@theme` at build time and hoists it out of any at-rule, so a
+  `@theme` nested in this media query would apply unconditionally and the light palette would
+  never render. Utilities compile to `var(--color-*)`, so redefining the variables here is
+  enough, and every component keeps reading through the token layer.
+*/
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-paper: #141210;
+    --color-paper-raised: #1c1916;
+    --color-ink: #ede9e1;
+    --color-ink-soft: #cec7bb;
+    --color-muted: #928a7d;
+    --color-rule: #332e28;
+    --color-accent: #d09aa8;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-display);
+    font-synthesis-weight: none;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-paper);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+    letter-spacing: -0.022em;
+  }
+
+  p { text-wrap: pretty; }
+}
+
+@utility label {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* A hairline that carries a numeral in the margin — the recurring structural device. */
+@utility rule-top {
+  border-top: 1px solid var(--color-rule);
+}
+
+/*
+  Underline that grows from the left on hover. Uses background-size rather than a border so
+  nothing in the layout shifts, and it degrades to a plain link with reduced motion.
+*/
+@utility link-quiet {
+  background-image: linear-gradient(var(--color-accent), var(--color-accent));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  transition: background-size 420ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  &:hover, &:focus-visible {
+    background-size: 100% 1px;
+  }
+}

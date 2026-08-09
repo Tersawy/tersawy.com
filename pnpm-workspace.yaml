@@ -1,0 +1,4 @@
+# pnpm 11 blocks dependency build scripts unless each one is allowed explicitly. esbuild needs
+# its postinstall to fetch the platform binary, and Vite will not start without it.
+allowBuilds:
+  esbuild: true
