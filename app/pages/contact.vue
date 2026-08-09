@@ -2,7 +2,7 @@
 useSeoMeta({
   title: 'Contact',
   description: 'Email contact@tersawy.com, or find me on LinkedIn and GitHub. Based in Giza, Egypt (UTC+2).',
-  ogTitle: 'Contact — Mohamed El-Tersawy',
+  ogTitle: 'Contact — Mohamed Tersawy',
   ogDescription: 'contact@tersawy.com · Giza, Egypt (UTC+2)',
 })
 
@@ -16,13 +16,20 @@ const channels = [
   },
   {
     index: '02',
+    label: 'WhatsApp',
+    value: '+20 105 520 0552',
+    href: 'https://wa.me/201055200552',
+    note: 'Fastest if you want an answer today rather than tomorrow.',
+  },
+  {
+    index: '03',
     label: 'LinkedIn',
     value: 'linkedin.com/in/tersawy',
     href: 'https://www.linkedin.com/in/tersawy',
     note: 'Where the full history lives, if you want dates and titles.',
   },
   {
-    index: '03',
+    index: '04',
     label: 'GitHub',
     value: 'github.com/tersawy',
     href: 'https://github.com/tersawy',

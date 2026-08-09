@@ -10,7 +10,7 @@ const links = [
   <header class="px-6 pt-7 sm:px-10 lg:px-14">
     <div class="mx-auto flex max-w-6xl flex-wrap items-baseline justify-between gap-x-8 gap-y-3">
       <NuxtLink to="/" class="link-quiet text-[1.06rem] tracking-tight">
-        Mohamed El-Tersawy
+        Mohamed Tersawy
       </NuxtLink>
 
       <nav aria-label="Primary">

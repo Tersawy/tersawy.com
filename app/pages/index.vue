@@ -1,10 +1,10 @@
 <script setup lang="ts">
 // No `title` here on purpose: the template in app.vue supplies the full home-page title, and
-// setting one would produce "Mohamed El-Tersawy — … — Mohamed El-Tersawy".
+// setting one would produce "Mohamed Tersawy — … — Mohamed Tersawy".
 useSeoMeta({
   description:
     'Full-stack developer in Giza, Egypt. Six years building systems where being wrong is expensive — orders, ledgers, money — and owning them through to production.',
-  ogTitle: 'Mohamed El-Tersawy — Full-stack developer',
+  ogTitle: 'Mohamed Tersawy — Full-stack developer',
   ogDescription:
     'Six years building systems where being wrong is expensive, and owning them through to production.',
   ogType: 'website',

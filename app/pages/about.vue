@@ -3,7 +3,7 @@ useSeoMeta({
   title: 'About',
   description:
     'A technical diploma in automotive technology, then six years teaching myself to build software — up to owning a multi-tenant SaaS platform end to end.',
-  ogTitle: 'About — Mohamed El-Tersawy',
+  ogTitle: 'About — Mohamed Tersawy',
   ogDescription: 'How a diploma in automotive technology turned into owning a SaaS platform.',
 })
 </script>

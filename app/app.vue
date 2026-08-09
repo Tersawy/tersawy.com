@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useHead({
   titleTemplate: (title?: string) =>
-    title ? `${title} — Mohamed El-Tersawy` : 'Mohamed El-Tersawy — Full-stack developer',
+    title ? `${title} — Mohamed Tersawy` : 'Mohamed Tersawy — Full-stack developer',
 })
 </script>
 

@@ -3,7 +3,7 @@ useSeoMeta({
   title: 'Work',
   description:
     'Golify — a multi-tenant SaaS ERP with per-tenant database isolation, a double-entry accounting engine, and infrastructure I own. Plus earlier work at Cyber Sky and on my own.',
-  ogTitle: 'Work — Mohamed El-Tersawy',
+  ogTitle: 'Work — Mohamed Tersawy',
   ogDescription:
     'Multi-tenancy, double-entry accounting, exact money, and production ownership.',
 })
