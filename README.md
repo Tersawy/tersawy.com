@@ -19,7 +19,7 @@ Four pages — home, work, about, contact — with no CMS and no content collect
 this size a database of one author writing four pages is overhead, so the copy lives in the
 components and changes with a commit.
 
-```
+```text
 app/
   app.vue              header + page + footer, and the skip link
   error.vue            404 and everything else, same shell
@@ -45,6 +45,12 @@ justify a build-time module. If you add routes, add them to `public/sitemap.xml`
 **No Nitro preset is pinned.** Deno Deploy detects Nuxt and configures Nitro itself; pinning one
 here would fight that. Prerendering is preset-independent, so every page ships as static HTML
 either way.
+
+**No `packageManager` field either.** With one, pnpm tries to fetch that exact version inside the
+Deno Deploy builder, and that download lands broken there — `Module not found .../dist/pnpm.mjs`,
+install dead at 2s. Without it the builder's own pnpm runs, and `lockfileVersion: 9.0` is read
+happily by pnpm 9, 10 and 11 alike. Pinning Deno's current version instead would only work until
+they upgrade it.
 
 ## Deploying
 
